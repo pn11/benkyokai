@@ -10,4 +10,11 @@ if(CMAKE_COMPILER_IS_GNUCXX)
   add_definitions(-std=gnu++0x)
 endif()
 
-add_definitions(-DDEBUG_LEVEL=4)
+
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+
+set(CMAKE_CXX_FLAGS "-Wall -Wextra")
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")

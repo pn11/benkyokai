@@ -8,15 +8,16 @@
 
 First, CMake is needed.
 
-```
+```bash
 cd build
-cmake ..
+cmake .. -DCMAKE_BUILD_TYPE=Debug # for Debug mode
+cmake .. -DCMAKE_BUILD_TYPE=Release # for Release mode
 ```
 
 Then,  
 For Linux and Mac:
 
-```
+```bash
 make
 ```
 
