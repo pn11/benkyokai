@@ -7,3 +7,4 @@
 ## 画像処理
 
 - [アフィン変換](image-processing/affine_transform.ipynb)
+	- GitHub だと TeX の数式表示がおかしいので → nbviewer は[こちら](https://nbviewer.jupyter.org/github/pn11/benkyokai/blob/master/image-processing/affine_transform.ipynb)
