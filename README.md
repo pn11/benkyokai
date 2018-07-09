@@ -9,3 +9,6 @@
 		- GitHub だと TeX の数式表示がおかしいので → nbviewer は[こちら](https://nbviewer.jupyter.org/github/pn11/benkyokai/blob/master/image-processing/affine_transform.ipynb)
 
 - [機械学習](machine-learning)
+    - [Kaggle](machine-learning/kaggle)
+
+- [競技プログラミング](competitive)
