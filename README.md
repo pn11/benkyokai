@@ -10,5 +10,6 @@
 
 - [機械学習](machine-learning)
     - [Kaggle](machine-learning/kaggle)
+- [統計学](statistics)
 
 - [競技プログラミング](competitive)
