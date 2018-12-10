@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - geometries</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<style>
+			body {
+				font-family: Monospace;
+				background-color: #000;
+				margin: 0px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script src="three.min.js"></script>
+
+		<script src="js/Detector.js"></script>
+		<script src="js/libs/stats.min.js"></script>
+
+		<script>
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+			var container, stats;
+
+			var camera, scene, renderer;
+
+			init();
+			animate();
+
+			function init() {
+
+				container = document.createElement( 'div' );
+				document.body.appendChild( container );
+
+
+ 	w = window.innerWidth;
+ 	h = window.innerHeight;
+ 	angle = 45;
+
+			camera = new THREE.PerspectiveCamera( angle, w / h, 1, 2000 );
+//			camera = new THREE.OrthographicCamera( 100, 100, 100, 100, 100,100);
+
+           camera.position.x = 800;
+			camera.position.z = 800;
+			camera.position.y = 800;
+	camera.up.x=0;
+	camera.up.y=0;
+			camera.up.z=1;
+      //           camera = new THREE.Camera( 75, w / h, 1, 10000 );
+   //             camera.position.z = 10;
+ 
+
+				scene = new THREE.Scene();
+
+				var light, object, object2, materials;
+
+				scene.add( new THREE.AmbientLight( 0x404040 ) );
+
+				light = new THREE.DirectionalLight( 0xffffff );
+				light.position.set( 1, 0, 0 );
+				scene.add( light );
+
+				var map = THREE.ImageUtils.loadTexture( 'textures/ash_uvgrid01.jpg' );
+				map.wrapS = map.wrapT = THREE.RepeatWrapping;
+				map.anisotropy = 16;
+
+				materials = [
+					new THREE.MeshLambertMaterial( { ambient: 0xbbbbbb, map: map, side: THREE.DoubleSide } ),
+					new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true, transparent: true, opacity: 0.1, side: THREE.DoubleSide } )
+				];
+
+				object = THREE.SceneUtils.createMultiMaterialObject( new THREE.CylinderGeometry( 27.25, 27.25, 126.6, 40, 5 ), materials );
+//				object.position.set( 409.044, -213.937, 56.3887 );
+//				object.rotation.set(2.65022, 1.10108, 1.730422);
+
+var rot = new THREE.Vector3(Math.PI/2.0, 0.0, 0.0);
+//object.up.x=0;
+//object.up.y=0;
+//object.up.z=1;
+object.rotation = rot;
+
+
+			//	scene.add( object );
+
+
+
+
+
+object = THREE.SceneUtils.createMultiMaterialObject( new THREE.CylinderGeometry( 27.25, 27.25, 126.6, 40, 5 ), materials );
+object.position.set( 391.873, 243.539, 132.993);
+mat=new THREE.Matrix4();
+mat.set(
+-0.681975,0.037222,0.730428, 0.0,
+0.60887,-0.524412,0.595205, 0.0,
+0.4052,0.850651,0.334973, 0.0,
+0.0, 0.0, 0.0, 1.0
+);
+vec = new THREE.Vector3().setEulerFromRotationMatrix(mat,'XYZ');
+object.rotation.x=vec.x + Math.PI/2.0;
+object.rotation.y=vec.y;
+object.rotation.z=vec.z;
+scene.add( object );
+object = THREE.SceneUtils.createMultiMaterialObject( new THREE.CylinderGeometry( 27.25, 27.25, 126.6, 40, 5 ), materials );
+object.position.set( 422.679, 171.289, 156.079);
+mat=new THREE.Matrix4();
+mat.set(
+0.487245,-0.375579,0.788373, 0.0,
+0.197452,0.92679,0.319488, 0.0,
+-0.85065,-3.12461e-06,0.525733, 0.0,
+0.0, 0.0, 0.0, 1.0
+);
+vec = new THREE.Vector3().setEulerFromRotationMatrix(mat,'XYZ');
+object.rotation.x=vec.x;
+object.rotation.y=vec.y;
+object.rotation.z=vec.z;
+scene.add( object );
+
+
+
+/*				var points = [];
+
+				for ( var i = 0; i < 50; i ++ ) {
+
+					points.push( new THREE.Vector3( Math.sin( i * 0.2 ) * 15 + 50, 0, ( i - 5 ) * 2 ) );
+
+				}
+*/
+//Draw Axis
+				object = new THREE.AxisHelper( 500);
+				object.position.set( 0, 0, 0 );
+				scene.add( object );
+
+//Draw Arrow
+                length =200;
+				object = new THREE.ArrowHelper( new THREE.Vector3( 0, 0, 1 ), new THREE.Vector3( 0, 0, 0 ), length );
+//				object = new THREE.ArrowHelper( new THREE.Vector3( -47.4302, 11.7733, -116.788), new THREE.Vector3( 0, 0, 0 ), length );
+                object.position.set(0, 100, 100);
+mat=new THREE.Matrix4();
+mat.set(
+0.240913,-0.895322,0.374646, 0.0,
+0.970547,0.22224,-0.092996, 0.0,
+0,0.386015,0.922492, 0.0,
+0.0, 0.0, 0.0, 1.0
+);
+
+//vec = new THREE.Vector3().setEulerFromRotationMatrix(mat,'XYZ');
+vec= ( -47.4302, 11.7733, -116.788);
+//object.eulerOrder='ZXY';
+//object.rotation=(1.32749, 0.39, 0.0);
+object.rotation=vec;
+//object.rotation.y=0.396308;
+//object.rotation.z=0.00;
+
+//object.rotation.x=vec.x + Math.PI/2.0;
+//object.rotation.y=vec.y;
+//object.rotation.z=vec.z;
+
+				scene.add( object );
+
+				object = new THREE.ArrowHelper( new THREE.Vector3( -47.4302, 11.7733, -116.788), new THREE.Vector3( 0, 0, 0 ), length );
+                object.position.set(50.669, -37.3989, 507.724);
+				scene.add( object );
+				
+				
+				object = new THREE.ArrowHelper( new THREE.Vector3( -47.4302, 11.7733, -116.788), new THREE.Vector3( 0, 0, 0 ), length );
+                object.position.set(203.851, -50.5996, 484.79);
+				scene.add( object );
+				
+				
+				
+				//				object = new THREE.ArrowHelper( new THREE.Vector3( 0, 1, 0 ), new THREE.Vector3( 0, 0, 0 ), length );
+				object = new THREE.ArrowHelper( new THREE.Vector3( -47.4302, 11.7733, -116.788), new THREE.Vector3( 0, 0, 0 ), length );
+                object.position.set(163.297, -95.6569, 496.722);
+				scene.add( object );
+				
+				
+				
+				//				object = new THREE.ArrowHelper( new THREE.Vector3( 0, 1, 0 ), new THREE.Vector3( 0, 0, 0 ), length );
+				object = new THREE.ArrowHelper( new THREE.Vector3( -47.4302, 11.7733, -116.788), new THREE.Vector3( 0, 0, 0 ), length );
+//				object.position.set( 200, 0, 200 );
+                object.position.set(97.487, -24.1982, 530.653);
+
+                object.rotation.x=3.14;
+				scene.add( object );
+
+
+object = THREE.SceneUtils.createMultiMaterialObject( new THREE.CylinderGeometry( 27.25, 27.25, 126.6, 40, 5 ), materials );
+
+
+object = THREE.SceneUtils.createMultiMaterialObject(  new THREE.LatheGeometry([new THREE.Vector3(0.0, 0.0, 63.3), new THREE.Vector3(27.25, 0.0, 63.3), new THREE.Vector3(27.25, 0.0, -63.3),new THREE.Vector3(0.0, 0.0, -63.3)], 30), materials );
+//object.position.x=-181.74600;
+//object.position.y=155.359000;
+//object.position.z=-345.968000;
+object.position.set(-181.746, 155.359, -345.968);
+
+//object.eulerOrder='XYZ';
+//vec = new THREE.Vector3(-1.8140900, 2.588020 , 3.141590);
+//object.rotation=vec;
+//object.rotation.x=1.5;
+
+object.lookAt(new THREE.Vector3(0, 0, 0));
+
+
+
+                      scene.add(object);
+
+
+
+
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				container.appendChild( renderer.domElement );
+
+				stats = new Stats();
+				stats.domElement.style.position = 'absolute';
+				stats.domElement.style.top = '0px';
+				container.appendChild( stats.domElement );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				render();
+				stats.update();
+
+			}
+
+			function render() {
+
+				var timer = Date.now() * 0.0001;
+
+//				camera.position.x = Math.cos( timer ) * 800;
+//				camera.position.x = 800;
+//				camera.position.z = Math.sin( timer ) * 800;
+//				camera.position.z = 800;
+
+				camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+
+	</body>
+</html>
