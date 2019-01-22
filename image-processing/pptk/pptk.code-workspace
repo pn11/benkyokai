@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		// "python.pythonPath": "venv\\Scripts\\python.exe" // for Windows
+		"python.pythonPath": "venv/bin/python"
+	}
+}
