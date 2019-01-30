@@ -99,10 +99,10 @@ void min_func(Int_t &npar, Double_t *gin, Double_t &f, Double_t *par, Int_t ifla
  * @brief メイン関数
  * 
  */
-#ifndef __CINT__
-void tminuit_sample(){
+#ifdef __CINT__
+int tminuit_sample(){
 #else
-voide main(){
+int main(){
 #endif
     auto c = std::unique_ptr<TCanvas>(new TCanvas("c", "c"));
     c->Divide(1, 2);
@@ -159,7 +159,7 @@ voide main(){
     for (int i = 0; i < npar; i++){
         min->GetParameter(i, par[i], parErr[i]);
         fit_minuit->FixParameter(i, par[i]);
-        cout << "Result: " << par[i] << " +/- " << parErr[i] << endl;
+        std::cout << "Result: " << par[i] << " +/- " << parErr[i] << std::endl;
     }
 
 
@@ -171,6 +171,7 @@ voide main(){
     c->Print("tminuit_sample.pdf", "pdf portrait");
 
     delete[] par;
+    return 0;
 }
 
 TH1D* create_data_hist(){

@@ -1,0 +1,6 @@
+*.pdf
+*.d
+*.so
+*.o
+*.pcm
+tminuit_sample
