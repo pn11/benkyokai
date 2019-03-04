@@ -34,3 +34,8 @@ wget https://tvm.ai/images/rocm/cat.png
 
 - [Juliaの画像処理ライブラリを使ってわかったこと - ログミーTech](https://logmi.jp/tech/articles/320153)
 - [画像処理 in Julia 1.0 #2 - Qiita](https://qiita.com/yoyoyoh-yohyoh/items/9f13d5450066a8a85991)
+
+## 試すこと
+
+- スキャン方法
+- 演算方法 (int, float, half, fixed-point, ...)
