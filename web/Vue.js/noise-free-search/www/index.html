@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Noise−free Search</title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="app">
+            <h3>クエリ</h3>
+            <textarea id="textarea_query"></textarea>
+            <button id="button_search">{{search_button_name}}</button>
+            <p>{{search_query}}</p>
+
+            <h3>除外リスト</h3>
+            <block-list
+                v-for="site in sites"
+                v-bind:site="site"
+            ></block-list>
+
+             <!--
+                v-on:remove="todos.splice(index, 1)"
+           >
+        -->
+        </div>
+    
+        <!-- development version, includes helpful console warnings -->
+       <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
+        <script src="bundle.js"></script>
+       <!-- <script type="module" src="main.js"></script>-->
+        
+    </body>
+</html>
