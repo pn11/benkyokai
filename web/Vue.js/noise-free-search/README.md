@@ -4,6 +4,7 @@
 
 ### Yarn 導入
 
+#### Ubuntu
 <https://yarnpkg.com/lang/en/docs/install/#debian-stable>
 
 
@@ -14,6 +15,12 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 
 ```
 sudo apt-get update && sudo apt-get install yarn
+```
+
+#### Mac
+
+```
+brew install yarn
 ```
 
 ### Create Project 
