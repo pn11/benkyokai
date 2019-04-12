@@ -35,8 +35,15 @@ var app = new Vue({
         ]
     },
     methods:{
-        addBlockSite(event, value){
-    
+        addBlockSite(){
+            this.search_query = "";
+            this.sites.forEach(
+                site => {
+                    if (site.doBlock){
+                        this.search_query += " -site:" + site.url;
+                    }
+                }
+            );
         }
     }
 })
