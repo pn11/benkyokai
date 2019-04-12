@@ -26,7 +26,12 @@ var app = new Vue({
                 name: 'code.i-harness',
                 url: 'code.i-harness.com',
                 doBlock: true
-            }   
+            },
+            {
+                name: 'CODE Examples',
+                url: 'code-examples.net',
+                doBlock: true
+            }
         ]
     },
     methods:{
