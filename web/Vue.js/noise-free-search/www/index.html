@@ -10,20 +10,13 @@
             <h3>クエリ</h3>
             <textarea id="textarea_query"></textarea>
             <button id="button_search">{{search_button_name}}</button>
-            <p>{{search_query}}</p>
 
             <h3>除外リスト</h3>
+            <p>{{search_query}}</p>
             <block-list
                 v-for="site in sites"
                 v-bind:site="site"
             ></block-list>
-
-            <button v-on:click="addBlockSite()">Apply</button>
-
-             <!--
-                v-on:remove="todos.splice(index, 1)"
-           >
-        -->
         </div>
     
         <!-- development version, includes helpful console warnings -->

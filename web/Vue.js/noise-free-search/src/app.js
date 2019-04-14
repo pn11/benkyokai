@@ -13,7 +13,6 @@ Vue.component('block-list', {
 var app = new Vue({
     el: '#app',
     data: {
-        search_query: '',
         search_button_name: 'Search with Google',
         message: 'Search query',
         sites: [
@@ -32,18 +31,21 @@ var app = new Vue({
                 url: 'code-examples.net',
                 doBlock: true
             }
-        ]
+        ],
     },
     methods:{
-        addBlockSite(){
-            this.search_query = "";
+    },
+    computed: {
+        search_query: function () {
+            var query = "";
             this.sites.forEach(
                 site => {
                     if (site.doBlock){
-                        this.search_query += " -site:" + site.url;
+                        query += " -site:" + site.url;
                     }
                 }
             );
+            return query;
         }
     }
 })
