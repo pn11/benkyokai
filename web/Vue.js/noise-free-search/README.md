@@ -1,4 +1,4 @@
-# 機械翻訳のクソサイトとかを除いて検索するためのやつ
+# 機械翻訳のクソサイトとかを除いて検索するためのやつ (作成中)
 
 ## Usage
 
@@ -50,6 +50,7 @@ yarn start # http://localhost:4000 にアクセスで見られる。
 - [リストレンダリング — Vue.js](https://jp.vuejs.org/v2/guide/list.html)
 - [コンポーネントの基本 — Vue.js](https://jp.vuejs.org/v2/guide/components.html)
     - これを真似していったらコンポーネントが理解できた。 Vue.js は公式サイトを写経していくのが一番良い勉強方法かも。
+- [算出プロパティとウォッチャ — Vue.js](https://jp.vuejs.org/v2/guide/computed.html)
 
 ### クソサイトについて
 
@@ -57,4 +58,4 @@ yarn start # http://localhost:4000 にアクセスで見られる。
 
 - [Сообщения со ссылками на спам–сайты будут блокироваться движком - Stack Overflow на русском Meta](https://ru.meta.stackoverflow.com/questions/7104/%d0%a1%d0%be%d0%be%d0%b1%d1%89%d0%b5%d0%bd%d0%b8%d1%8f-%d1%81%d0%be-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b0%d0%bc%d0%b8-%d0%bd%d0%b0-%d1%81%d0%bf%d0%b0%d0%bc-%d1%81%d0%b0%d0%b9%d1%82%d1%8b-%d0%b1%d1%83%d0%b4%d1%83%d1%82-%d0%b1%d0%bb%d0%be%d0%ba%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d1%82%d1%8c%d1%81%d1%8f-%d0%b4%d0%b2%d0%b8%d0%b6%d0%ba%d0%be%d0%bc)
 
-
+- [検索結果から「いかがでしたかブログ」除外　ブラウザ拡張機能「ゴシップサイトブロッカー」が便利 - ねとらぼ](https://nlab.itmedia.co.jp/nl/articles/1903/14/news149.html)
