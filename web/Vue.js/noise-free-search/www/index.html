@@ -13,10 +13,16 @@
 
             <h3>除外リスト</h3>
             <p>{{search_query}}</p>
+            <h4>ドメイン指定</h4>
             <block-list
                 v-for="site in sites"
                 v-bind:site="site"
             ></block-list>
+            <h4>ワード指定</h4>
+            <block-words
+            v-for="word in block_words"
+            v-bind:word="word"
+            ></block-words>
         </div>
     
         <!-- development version, includes helpful console warnings -->

@@ -8,8 +8,15 @@ Vue.component('block-list', {
         <input type="checkbox" v-model="site['doBlock']"> {{site.name}} <span v-if="site['doBlock'] === true"> : {{site.url}} is blocked.</span>
         </div>`
 })
-  
 
+Vue.component('block-words', {
+    props: ['word'],
+    template: 
+        `<div>
+        <input type="checkbox" v-model="word['doBlock']"> {{word.name}} <span v-if="word['doBlock'] === true"> : {{word.name}} is blocked.</span>
+        </div>`
+})
+  
 var app = new Vue({
     el: '#app',
     data: {
@@ -32,6 +39,12 @@ var app = new Vue({
                 doBlock: true
             }
         ],
+        block_words: [
+            {
+                name: 'いかがでしたか',
+                doBlock: true
+            }
+        ]
     },
     methods:{
     },
@@ -42,6 +55,13 @@ var app = new Vue({
                 site => {
                     if (site.doBlock){
                         query += " -site:" + site.url;
+                    }
+                }
+            );
+            this.block_words.forEach(
+                word => {
+                    if (word.doBlock){
+                        query += " -" + word.name;
                     }
                 }
             );
