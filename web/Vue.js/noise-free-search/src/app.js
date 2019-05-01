@@ -47,6 +47,11 @@ var app = new Vue({
         ]
     },
     methods:{
+        search: function(){
+            var query = "https://www.google.com/search?q=";
+            query += this.input_query + this.search_query
+            window.open(encodeURI(query), '_blank')
+        }
     },
     computed: {
         search_query: function () {

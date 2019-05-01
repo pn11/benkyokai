@@ -5,27 +5,33 @@
 ### Yarn 導入
 
 #### Ubuntu
+
+`sudo apt install yarn` は別のものが入るのでやらないこと。以下の公式サイト通りにやる。
+
 <https://yarnpkg.com/lang/en/docs/install/#debian-stable>
 
-
-```
+```bash
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 ```
 
-```
+```bash
 sudo apt-get update && sudo apt-get install yarn
 ```
 
+Ubuntu 16.04 では yarn を実行するとエラーになることがある。Node.js をアップデートすると治る。
+
+- [Installation Problem: Unexpected token { in cli.js · Issue #6914 · yarnpkg/yarn](https://github.com/yarnpkg/yarn/issues/6914#issuecomment-454124927)
+
 #### Mac
 
-```
+```bash
 brew install yarn
 ```
 
-### Create Project 
+### Create Project
 
-```
+```bash
 mkdir noise-free-search
 yarn init
 yarn add webpack webpack-dev-server vue vue-loader vue-template-compiler
@@ -33,7 +39,7 @@ yarn add webpack webpack-dev-server vue vue-loader vue-template-compiler
 
 ### Start Server
 
-```
+```bash
 node_modules/.bin/webpack #webpack でコンパイル
 yarn start # http://localhost:4000 にアクセスで見られる。
 ```

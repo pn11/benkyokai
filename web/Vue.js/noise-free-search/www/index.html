@@ -8,8 +8,8 @@
     <body>
         <div id="app">
             <h3>クエリ</h3>
-            <textarea id="textarea_query"></textarea>
-            <button id="button_search">{{search_button_name}}</button>
+            <input v-model="input_query" v-on:keyup.enter="search">
+            <button id="button_search" v-on:click="search">{{search_button_name}}</button>
 
             <h3>除外リスト</h3>
             <p>{{search_query}}</p>
