@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 Vue.component('block-list', {
     props: ['site'],
-    template: 
+    template:
         `<div>
         <input type="checkbox" v-model="site['doBlock']"> {{site.name}} <span v-if="site['doBlock'] === true"> : {{site.url}} is blocked.</span>
         </div>`
@@ -11,17 +11,25 @@ Vue.component('block-list', {
 
 Vue.component('block-words', {
     props: ['word'],
-    template: 
+    template:
         `<div>
         <input type="checkbox" v-model="word['doBlock']"> {{word.name}} <span v-if="word['doBlock'] === true"> : {{word.name}} is blocked.</span>
         </div>`
 })
-  
+
+Vue.component('filetype-list', {
+    props: ['filetype'],
+    template:
+        `<div>
+        <input type="checkbox" v-model="filetype['doSpecify']"> {{filetype.name}} <span v-if="filetype['doSpecify'] === true"> : {{filetype.name}} is specified.</span>
+        </div>`
+})
+
 var app = new Vue({
     el: '#app',
     data: {
         search_button_name: 'Search with Google',
-        message: 'Search query',
+        input_query: 'Search query',
         sites: [
             {
                 name: 'stackoverrun',
@@ -43,6 +51,12 @@ var app = new Vue({
             {
                 name: 'いかがでしたか',
                 doBlock: true
+            }
+        ],
+        filetypes: [
+            {
+                name: 'pdf',
+                doSpecify: false
             }
         ]
     },
@@ -67,6 +81,13 @@ var app = new Vue({
                 word => {
                     if (word.doBlock){
                         query += " -" + word.name;
+                    }
+                }
+            );
+            this.filetypes.forEach(
+                filetype => {
+                    if (filetype.doSpecify){
+                        query += " filetype:" + filetype.name;
                     }
                 }
             );

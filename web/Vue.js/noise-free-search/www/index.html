@@ -23,6 +23,11 @@
             v-for="word in block_words"
             v-bind:word="word"
             ></block-words>
+            <h4>ファイル形式指定</h4>
+            <filetype-list
+                v-for="ft in filetypes"
+                v-bind:filetype="ft"
+            ></filetype-list>
         </div>
     
         <!-- development version, includes helpful console warnings -->
