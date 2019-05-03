@@ -1,4 +1,4 @@
-# 機械翻訳のクソサイトとかを除いて検索するためのやつ (作成中)
+# 機械翻訳のクソサイトとかを除いて検索するためのやつ
 
 ## Usage
 
@@ -43,6 +43,10 @@ yarn add webpack webpack-dev-server vue vue-loader vue-template-compiler
 node_modules/.bin/webpack #webpack でコンパイル
 yarn start # http://localhost:4000 にアクセスで見られる。
 ```
+
+![デモ](image.gif)
+
+Web フレームワークを初めて使ってみた。
 
 ## Reference
 
