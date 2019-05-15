@@ -21,6 +21,22 @@ RUN mkdir root-build  && \
     make -j3 && \
     make install
 
-# ROOT の Jupyter Kernel をコピー
-# https://github.com/root-project/root/tree/master/bindings/pyroot/JupyROOT
-RUN cp -r $ROOTSYS/etc/notebook/kernels/root ~/.local/share/jupyter/kernels
+# ROOT の Jupyter Kernel を Jupyter にインストール
+RUN runuser jovyan -c "jupyter kernelspec install --user /home/jovyan/root/etc/notebook/kernels/root/;"
+RUN pip install metakernel
+
+ENV ROOTSYS /usr/local
+ENV LD_LIBRARY_PATH /usr/local/lib
+ENV DYLD_LIBRARY_PATH /usr/local/lib
+ENV CMAKE_PREFIX_PATH /usr/local
+ENV JUPYTER_PATH /usr/local/etc/notebook
+ENV SHLIB_PATH /usr/local/lib
+ENV LIBPATH /usr/local/lib
+ENV PYTHONPATH /usr/local/lib
+ENV MANPATH /usr/local/man:
+ENV CLING_STANDARD_PCH none
+
+CMD runuser jovyan -c "jupyter notebook"
+
+# 不要データ削除
+RUN rm -r /home/jovyan/root /home/jovyan/root-build
