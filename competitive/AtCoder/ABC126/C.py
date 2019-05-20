@@ -4,11 +4,10 @@ prob = 0
 
 for i in range(1, N+1):
     j = i
-    p = 1.0
+    inverse_p = N
     while j < K:
         j *= 2
-        p *= 0.5
-    prob += p
+        inverse_p *= 2
+    prob += 1/ inverse_p
 
 print(prob)
-    
