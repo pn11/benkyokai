@@ -1,0 +1,10 @@
+- hosts: vagrants
+sudo: true
+user: vagrant
+tasks:
+  - name: install packages ubuntu-desktop
+    apt: name=ubuntu-desktop update_cache=yes
+  - name: install packages for ROOT
+    apt: name=build-essential,git,dpkg-dev,cmake,g++,gcc,binutils,libx11-dev,libxpm-dev,libxft-dev,libxext-dev update_cache=yes
+  - name: install pakcages for Geant4
+    apt: name=qt5-default update_cache=yes

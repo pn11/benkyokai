@@ -1,0 +1,58 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+    config.vm.box = "bento/ubuntu-18.04"
+
+    config.vm.network "forwarded_port", guest: 3000, host: 3000
+    config.vm.network "private_network", ip: "192.168.33.10"
+
+    config.vm.provider "virtualbox" do |vb|
+        vb.gui = true
+        vb.memory = "8192"
+
+        vb.customize [
+            "modifyvm", :id,
+            "--vram", "256", 
+            "--clipboard", "bidirectional", 
+            "--draganddrop", "bidirectional",
+            "--cpus", "2",
+            "--ioapic", "on"
+        ]
+    end
+
+=begin
+    # ansible を使う場合
+    config.vm.provision "ansible" do |ansible|
+        ansible.playbook = "provisioning/site.yml"
+        ansible.inventory_path = "provisioning/hosts"
+        ansible.limit = 'all'
+    end
+=end
+
+    config.vm.provision "shell", privileged: true, inline: <<-SHELL
+        apt-get update
+        apt-get install -y ubuntu-desktop build-essential git dpkg-dev cmake g++ gcc binutils libx11-dev libxpm-dev libxft-dev libxext-dev qt5-default
+    SHELL
+
+
+    # Installing ROOT (binary)
+    config.vm.provision "shell", privileged: false, inline: <<-SHELL
+        wget https://root.cern/download/root_v6.16.00.Linux-ubuntu18-x86_64-gcc7.3.tar.gz
+        tar xzvf root_v6.16.00.Linux-ubuntu18-x86_64-gcc7.3.tar.gz
+    SHELL
+
+    # Installing Geant4
+    config.vm.provision "shell", privileged: false, inline: <<-SHELL
+        mkdir geant4.10.04.p03-install
+        wget http://geant4-data.web.cern.ch/geant4-data/releases/geant4.10.04.p03.tar.gz
+        tar xzvf geant4.10.04.p03.tar.gz
+        cd geant4.10.04.p03
+        mkdir build
+        cd build
+        cmake -DCMAKE_INSTALL_PREFIX=$HOME/geant4.10.04.p03-install -DGEANT4_INSTALL_DATA=ON -DGEANT4_USE_QT=ON ..
+        make -j2
+        make install
+    SHELL
+end
