@@ -48,6 +48,34 @@ yarn start # http://localhost:4000 にアクセスで見られる。
 
 Web フレームワークを初めて使ってみた。
 
+### Deploy on Firebase
+
+```sh
+firebase init
+```
+
+でソースディレクトリを `www` に指定。  
+`index.html` に以下を追加。
+
+```html
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.1.1/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#reserved-urls -->
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+```
+
+以下でデプロイ。
+
+```sh
+firebase deploy
+```
+
+デプロイ結果。Webアプリを初めて公開してみた。
+
+- [Noise−free Search](https://noise-free-search.firebaseapp.com/)
+
 ## Reference
 
 ### yarn, Webpack
@@ -59,7 +87,7 @@ Web フレームワークを初めて使ってみた。
 
 - [リストレンダリング — Vue.js](https://jp.vuejs.org/v2/guide/list.html)
 - [コンポーネントの基本 — Vue.js](https://jp.vuejs.org/v2/guide/components.html)
-    - これを真似していったらコンポーネントが理解できた。 Vue.js は公式サイトを写経していくのが一番良い勉強方法かも。
+  - これを真似していったらコンポーネントが理解できた。 Vue.js は公式サイトを写経していくのが一番良い勉強方法かも。
 - [算出プロパティとウォッチャ — Vue.js](https://jp.vuejs.org/v2/guide/computed.html)
 
 ### クソサイトについて
