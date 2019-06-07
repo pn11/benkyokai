@@ -45,6 +45,11 @@ var app = new Vue({
                 name: 'CODE Examples',
                 url: 'code-examples.net',
                 doBlock: true
+            },
+            {
+                name: 'CodeDay',
+                url: 'codeday.me',
+                doBlock: true
             }
         ],
         block_words: [
