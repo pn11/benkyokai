@@ -112,3 +112,29 @@ poll アプリを admin ページに追加。
 [mysite/polls/admin.py](mysite/polls/admin.py)
 
 を編集。adminページを更新すると question の編集ができるようになっている。
+
+## Part 3
+
+- [はじめての Django アプリ作成、その 3 | Django ドキュメント | Django](https://docs.djangoproject.com/ja/2.2/intro/tutorial03/)
+
+### ビューの改良
+
+- [mysite/polls/views.py](mysite/polls/views.py)
+- [mysite/polls/urls.py](mysite/polls/urls.py)
+
+を編集。
+
+- <http://localhost:8000/polls/1/results/>
+- <http://localhost:8000/polls/1/>
+- <http://localhost:8000/polls/1/vote>
+
+にアクセスできるようになっている (機能は未実装)。
+
+>Django にとって必要なのは HttpResponse か、あるいは例外です。
+
+さらに
+
+- [mysite/polls/views.py](mysite/polls/views.py)
+
+を編集
+
