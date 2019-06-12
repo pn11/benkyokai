@@ -30,3 +30,20 @@ $ python manage.py runserver 0:8000
 ```
 
 のようにする。
+
+## polls application
+
+```sh
+python manage.py startapp polls
+```
+
+以下を編集。
+
+- [mysite/polls/urls.py](mysite/polls/urls.py)
+- [mysite/mysite/urls.py](mysite/mysite/urls.py)
+
+```sh
+python manage.py runserver
+```
+
+して <http://127.0.0.1:8000/polls> にアクセス。
