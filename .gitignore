@@ -1,4 +1,7 @@
-*-checkpoint.ipynb
 build
-venv
 node_modules
+*.sqlite3
+#python
+*-checkpoint.ipynb
+venv
+*.pyc
