@@ -15,4 +15,4 @@ choco install vagrant virtualbox
 
 ## 2. vagrant up
 
-Run `vagrant up` in this directory.
+Run `vagrant up` in this directory. Currently, `site.yml` and `hosts` are not used.
