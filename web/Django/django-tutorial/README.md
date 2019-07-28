@@ -10,8 +10,12 @@
 
 ```bash
 $ python -m django --version
-2.2.2
+2.2.3
 ```
+
+※ Django 2.2.0 から 2.2.2 までは脆弱性があるので upgrade した。 (`pip install -U django`)
+
+- [NVD - CVE-2019-12781](https://nvd.nist.gov/vuln/detail/CVE-2019-12781)
 
 サーバーを起動
 
