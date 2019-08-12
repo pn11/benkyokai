@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"python.venvPath": "venv",
-		"python.pythonPath": "venv/bin/python"
+		"python.pythonPath": "venv/bin/python",
+		"terminal.integrated.shell.windows": "wsl.exe"
 	}
 }
