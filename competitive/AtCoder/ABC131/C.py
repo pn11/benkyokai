@@ -1,3 +1,4 @@
+'''A-1までの数を求めてBまでの数から引けばAからBまでになる。'''
 a, b, c, d = map(lambda x: int(x), input().split())
 a -= 1
 
