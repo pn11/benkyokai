@@ -55,7 +55,8 @@
     - Julia
 - [ABC097](ABC097)
 - [ABC116](ABC116)
-- [ABC119](ABC129)
+- [ABC119](ABC119)
+- [ABC127](ABC127)
 - [ABC130](ABC130)
 - [ABC131](ABC131)
 - [ABC132](ABC132)
@@ -66,3 +67,10 @@
 - [ABC135](ABC135)
     - Kotlin
 - [ABC136](ABC136)
+
+## 今日の一問
+
+- [2019/08/21](https://twitter.com/chokudai/status/1163662673529016321): [ABC026 C](ABC026/C.py)
+- [2019/08/21](https://twitter.com/chokudai/status/1164158989019447296)
+- [2019/08/22](https://twitter.com/chokudai/status/1164399086520324096)
+- [2019/08/23](https://twitter.com/chokudai/status/1164839232285712385)
