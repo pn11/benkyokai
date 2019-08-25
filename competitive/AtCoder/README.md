@@ -56,6 +56,7 @@
 - [ABC097](ABC097)
 - [ABC116](ABC116)
 - [ABC119](ABC119)
+- [ABC125](ABC125)
 - [ABC127](ABC127)
 - [ABC130](ABC130)
 - [ABC131](ABC131)
@@ -70,7 +71,8 @@
 
 ## 今日の一問
 
-- [2019/08/21](https://twitter.com/chokudai/status/1163662673529016321): [ABC026 C](ABC026/C.py)
-- [2019/08/21](https://twitter.com/chokudai/status/1164158989019447296)
-- [2019/08/22](https://twitter.com/chokudai/status/1164399086520324096)
-- [2019/08/23](https://twitter.com/chokudai/status/1164839232285712385)
+- [2019/08/20](https://twitter.com/chokudai/status/1163662673529016321): [ABC026 C](ABC026/C.py)
+- [2019/08/21](https://twitter.com/chokudai/status/1164158989019447296): [ABC112 C](ABC112/C_20190823.py)
+- [2019/08/22](https://twitter.com/chokudai/status/1164399086520324096): [ARC001 B](ARC001/B.py)
+- [2019/08/23](https://twitter.com/chokudai/status/1164839232285712385): ARC006 D
+- [2019/08/24](https://twitter.com/chokudai/status/1165200566051463169): ABC062 C
