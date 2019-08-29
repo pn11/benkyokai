@@ -82,3 +82,9 @@
 - [2019/08/26](https://twitter.com/chokudai/status/1166013067794141184): [ARC005 C](ABC005/C.py)
 - [2019/08/27](https://twitter.com/chokudai/status/1166223219386281984): ABC006 D
 - [2019/08/28](https://twitter.com/chokudai/status/1166677835894816768)
+
+## 問題種別
+
+### 優先度付きキュー
+
+- [ARC005 C](ARC005/C.py)
