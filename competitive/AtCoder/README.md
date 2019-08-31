@@ -81,7 +81,9 @@
 - [2019/08/25](https://twitter.com/chokudai/status/1165622130630742019): ARC073 C
 - [2019/08/26](https://twitter.com/chokudai/status/1166013067794141184): [ARC005 C](ABC005/C.py)
 - [2019/08/27](https://twitter.com/chokudai/status/1166223219386281984): ABC006 D
-- [2019/08/28](https://twitter.com/chokudai/status/1166677835894816768)
+- [2019/08/28](https://twitter.com/chokudai/status/1166677835894816768): tenka1_2012_final D
+- [2019/08/29](https://twitter.com/chokudai/status/1167064023491203072): ARC054 B
+- [2019/08/30](https://twitter.com/chokudai/status/1167450946953043969): [ARC 003 B](ABC003/B.py)
 
 ## 問題種別
 
