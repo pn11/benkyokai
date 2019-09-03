@@ -76,14 +76,15 @@
 - [2019/08/21](https://twitter.com/chokudai/status/1164158989019447296): [ABC112 C](ABC112/C_20190823.py)
 - [2019/08/22](https://twitter.com/chokudai/status/1164399086520324096): [ARC001 B](ARC001/B.py)
 - [2019/08/23](https://twitter.com/chokudai/status/1164839232285712385): ARC006 D
-- [2019/08/24](https://twitter.com/chokudai/status/1165200566051463169): ABC062 C
+- [2019/08/24](https://twitter.com/chokudai/status/1165200566051463169): [ABC062 C](ABC062/C.py)
 - [2019/08/24](https://twitter.com/chokudai/status/1165622130630742019): [ABC060 C](ABC060/C.py)
 - [2019/08/25](https://twitter.com/chokudai/status/1165622130630742019): ARC073 C
 - [2019/08/26](https://twitter.com/chokudai/status/1166013067794141184): [ARC005 C](ABC005/C.py)
 - [2019/08/27](https://twitter.com/chokudai/status/1166223219386281984): ABC006 D
 - [2019/08/28](https://twitter.com/chokudai/status/1166677835894816768): tenka1_2012_final D
 - [2019/08/29](https://twitter.com/chokudai/status/1167064023491203072): ARC054 B
-- [2019/08/30](https://twitter.com/chokudai/status/1167450946953043969): [ARC 003 B](ABC003/B.py)
+- [2019/08/30](https://twitter.com/chokudai/status/1167450946953043969): [ARC003 B](ABC003/B.py)
+- [2019/09/03](https://twitter.com/chokudai/status/1168859353278844929): 
 
 ## 問題種別
 
