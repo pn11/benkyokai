@@ -85,6 +85,8 @@
 - [2019/08/29](https://twitter.com/chokudai/status/1167064023491203072): ARC054 B
 - [2019/08/30](https://twitter.com/chokudai/status/1167450946953043969): [ARC003 B](ABC003/B.py)
 - [2019/09/03](https://twitter.com/chokudai/status/1168859353278844929): 
+- [2019/09/04](https://twitter.com/chokudai/status/1169266091295510528): [ABC016 C](ABC016/C.py)
+
 
 ## 問題種別
 
