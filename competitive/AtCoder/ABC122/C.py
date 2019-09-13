@@ -1,3 +1,4 @@
+'''アルゴリズムは簡単だけどPythonだと累積和使ってもぎりぎり'''
 import numpy as np
 def find_AC(S):
   ret = [0]*len(S)
