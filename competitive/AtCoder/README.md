@@ -48,29 +48,6 @@
 - [ABC138](ABC138)
     - Cまではすぐできたけど結局3完。
 
-## Offline
-
-- [ABC058](ABC058)
-- [ABC089](ABC089)
-    - Julia
-- [ABC097](ABC097)
-- [ABC116](ABC116)
-- [ABC119](ABC119)
-- [ABC122](ABC122)
-- [ABC124](ABC124)
-- [ABC125](ABC125)
-- [ABC127](ABC127)
-- [ABC130](ABC130)
-- [ABC131](ABC131)
-- [ABC132](ABC132)
-- [ABC133](ABC133)
-    - C++
-- [ABC134](ABC134)
-    - Rust
-- [ABC135](ABC135)
-    - Kotlin
-- [ABC136](ABC136)
-
 ## 今日の一問
 
 - [2019/08/20](https://twitter.com/chokudai/status/1163662673529016321): [ABC026 C](ABC026/C.py)
@@ -103,3 +80,7 @@
 ### 累積和
 
 - [ABC122 C](ABC122/C.py)
+
+### 2進数
+
+- [ABC128 C](ABC128/C_late.py)
