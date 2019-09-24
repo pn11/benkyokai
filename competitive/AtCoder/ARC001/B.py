@@ -1,4 +1,5 @@
-'''今日の一問。愚直に書いた。負の数の商とあまりは苦手。全部絶対値にしてやったほうが楽。'''
+'''https://twitter.com/chokudai/status/1164399086520324096
+今日の一問。愚直に書いた。負の数の商とあまりは苦手。全部絶対値にしてやったほうが楽。'''
 A, B = [int(x) for x in input().split()]
 
 def solve(diff, count):
