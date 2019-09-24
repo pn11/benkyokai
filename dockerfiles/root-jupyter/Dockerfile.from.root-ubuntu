@@ -1,0 +1,29 @@
+FROM rootproject/root-ubuntu
+
+RUN apt-get update && \
+    apt-get -y install python-notebook
+
+RUN python2 -m notebook --help
+#RUN python2 -m notebook kernelspec install /usr/local/etc/root/notebook/kernels/root/
+     
+# Jupyter のポート番号変更とrootユーザーでの実行許可
+## これやってもポート番号が変わらず詰む。
+## https://root-forum.cern.ch/t/root-notebook-question-port-and-ip-parameter/29617
+RUN python2 -m notebook --generate-config && \
+    echo "c.NotebookApp.allow_root = True" >> /root/.jupyter/jupyter_notebook_config.py  && \
+    echo "c.NotebookApp.ip = '0.0.0.0'" >> /root/.jupyter/jupyter_notebook_config.py
+
+ENV ROOTSYS /usr/local
+ENV LD_LIBRARY_PATH /usr/local/lib
+ENV DYLD_LIBRARY_PATH /usr/local/lib
+ENV CMAKE_PREFIX_PATH /usr/local
+ENV JUPYTER_PATH /usr/local/etc/notebook
+ENV SHLIB_PATH /usr/local/lib
+ENV LIBPATH /usr/local/lib
+ENV PYTHONPATH /usr/local/lib
+ENV MANPATH /usr/local/man:
+ENV CLING_STANDARD_PCH none
+
+#CMD jupyter notebook
+
+#Python2 で Jupyter を入れる必要がある。

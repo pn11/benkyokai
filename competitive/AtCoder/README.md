@@ -44,24 +44,43 @@
     - 新幹線の中で挑戦。2完。
 - [ABC137](ABC137)
     - 久しぶりに参戦。3完。A, B は2行で書けたけど C は汚くなった。Python3 だと通らなかったけど PyPy3 なら通った。
+    - D はナップサック問題かと思ってたけど、よく読むと違った。解説読んだけど TLE でまだできてない。
 - [ABC138](ABC138)
     - Cまではすぐできたけど結局3完。
 
-## Offline
+## 今日の一問
 
-- [ABC058](ABC058)
-- [ABC089](ABC089)
-    - Julia
-- [ABC097](ABC097)
-- [ABC116](ABC116)
-- [ABC119](ABC129)
-- [ABC130](ABC130)
-- [ABC131](ABC131)
-- [ABC132](ABC132)
-- [ABC133](ABC133)
-    - C++
-- [ABC134](ABC134)
-    - Rust
-- [ABC135](ABC135)
-    - Kotlin
-- [ABC136](ABC136)
+- [2019/08/20](https://twitter.com/chokudai/status/1163662673529016321): [ABC026 C](ABC026/C.py)
+- [2019/08/21](https://twitter.com/chokudai/status/1164158989019447296): [ABC112 C](ABC112/C_20190823.py)
+- [2019/08/22](https://twitter.com/chokudai/status/1164399086520324096): [ARC001 B](ARC001/B.py)
+- [2019/08/23](https://twitter.com/chokudai/status/1164839232285712385): ARC006 D
+- [2019/08/24](https://twitter.com/chokudai/status/1165200566051463169): [ABC062 C](ABC062/C.py)
+- [2019/08/24](https://twitter.com/chokudai/status/1165622130630742019): [ABC060 C](ABC060/C.py)
+- [2019/08/25](https://twitter.com/chokudai/status/1165622130630742019): ARC073 C
+- [2019/08/26](https://twitter.com/chokudai/status/1166013067794141184): [ARC005 C](ABC005/C.py)
+- [2019/08/27](https://twitter.com/chokudai/status/1166223219386281984): ABC006 D
+- [2019/08/28](https://twitter.com/chokudai/status/1166677835894816768): tenka1_2012_final D
+- [2019/08/29](https://twitter.com/chokudai/status/1167064023491203072): ARC054 B
+- [2019/08/30](https://twitter.com/chokudai/status/1167450946953043969): [ARC003 B](ABC003/B.py)
+- [2019/09/03](https://twitter.com/chokudai/status/1168859353278844929): 
+- [2019/09/04](https://twitter.com/chokudai/status/1169266091295510528): [ABC016 C](ABC016/C.py)
+
+
+## 問題種別
+
+### 優先度付きキュー
+
+- [ARC005 C](ARC005/C.py)
+- [ABC141 D](ABC141/D_late.py)
+
+### 無向グラフ
+
+- [ABC016 C](ABC016/C.py)
+
+### 累積和
+
+- [ABC122 C](ABC122/C.py)
+
+### 2進数
+
+- [ABC128 C](ABC128/C_late.py)
