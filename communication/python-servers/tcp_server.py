@@ -13,8 +13,7 @@ server.listen(5) # 5個まで接続できる
 client, addr = server.accept()
 print(f"Connected {client}, {address}")
 
-#while True:
 data = client.recv(max_size)
-print(f"At {datetime.now} from {client} recieved: {data}")
+print(f'Recieved from {client}: {data.decode("utf-8")}')
 client.close()
 server.close()
