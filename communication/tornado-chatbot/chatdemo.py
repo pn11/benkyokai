@@ -26,6 +26,7 @@ import tornado.web
 import tornado.websocket
 import os.path
 import uuid
+import xmlrpc.client
 
 from tornado.options import define, options
 
@@ -53,6 +54,8 @@ class ChatSocketHandler(tornado.websocket.WebSocketHandler):
     waiters = set()
     cache = []
     cache_size = 200
+    nullpo_client = xmlrpc.client.ServerProxy("http://localhost:20001")
+    calc_client = xmlrpc.client.ServerProxy("http://localhost:20002")
 
     def get_compression_options(self):
         # Non-None enables compression with default options.
@@ -83,13 +86,34 @@ class ChatSocketHandler(tornado.websocket.WebSocketHandler):
     def on_message(self, message):
         logging.info("got message %r", message)
         parsed = tornado.escape.json_decode(message)
-        chat = {"id": str(uuid.uuid4()), "body": parsed["body"]}
+
+        logging.info("parsed message %r", parsed['body'])
+        chat = {"id": str(uuid.uuid4()), "body": parsed['body']}
+        chat["html"] = tornado.escape.to_basestring(
+            self.render_string("message.html", message=chat)
+        )
+        ChatSocketHandler.update_cache(chat)
+        ChatSocketHandler.send_updates(chat)
+
+        send_message = self.dispatch(parsed['body'])
+        logging.info("send_message %r", send_message)
+        chat = {"id": str(uuid.uuid4()), "body": send_message}
         chat["html"] = tornado.escape.to_basestring(
             self.render_string("message.html", message=chat)
         )
 
         ChatSocketHandler.update_cache(chat)
         ChatSocketHandler.send_updates(chat)
+
+
+    def dispatch(self, message):
+        ret = "はいはい、「" + message + "」ね。"
+        if message == 'ぬるぽ':
+            ret = self.nullpo_client.nullpo()
+        elif '計算' in message:
+            expression = message.split()[-1]
+            ret = self.calc_client.calc(expression)
+        return ret
 
 
 def main():
