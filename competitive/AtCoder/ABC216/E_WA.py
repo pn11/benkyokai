@@ -16,13 +16,15 @@ sys.setrecursionlimit(10000)
 import numpy as np
 
 _INPUT_1 = """\
-3 20000
+3 220
 100 50 102
 """
 _INPUT_2 = """\
-2 2021
-2 3
+5 2
+1 1 1 1 1
 """
+
+多分同じ数がある場合 WA になる
 
 
 def solve():
@@ -41,7 +43,7 @@ def solve():
     range1 = np.cumsum(range1).tolist()
 
     a = bisect.bisect_left(range1, K)
-    print(N, K, range1, a)
+    #print(N, K, range1, a)
 
     ans = 0
     #print(A)
@@ -55,7 +57,7 @@ def solve():
         num_dup = a+1
         dd2 = dd // num_dup
         res = dd % num_dup
-        #print(dd, dd2, res)
+        print(num_dup, dd, dd2, res)
         ans += num_dup * ((A[a]-dd2+1)+(A[a]))*dd2/2
         #print(ans)
         ans += res * A[a]-dd2
